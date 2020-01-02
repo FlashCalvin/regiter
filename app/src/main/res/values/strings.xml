@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">register</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_birthday">BirthdayActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+</resources>
