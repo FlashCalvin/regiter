@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/your_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -36,18 +36,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="ACCOUNT"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/your_name"
+        app:layout_constraintTop_toBottomOf="@+id/your_name" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/your_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/your_name"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
@@ -56,17 +56,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="BIRTHDAY"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="@+id/your_account"
+        app:layout_constraintTop_toBottomOf="@+id/your_account" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/your_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintStart_toStartOf="@+id/your_account"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/your_birth"
+        app:layout_constraintTop_toBottomOf="@+id/your_birth" />
 </androidx.constraintlayout.widget.ConstraintLayout>

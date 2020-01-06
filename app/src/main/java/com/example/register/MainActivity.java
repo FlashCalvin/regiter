@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 String name =edName.getText().toString();
                 SharedPreferences pref =getSharedPreferences("test",MODE_PRIVATE);
                 pref.edit()
-                        .putString("name",name)
+                        .putString("NAME",name)
                         .commit();
                 Log.d(TAG, "onClick: ");
                 Intent intent =  new Intent(MainActivity.this, AccountActivity.class);

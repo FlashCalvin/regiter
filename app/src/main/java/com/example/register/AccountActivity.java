@@ -1,6 +1,7 @@
 package com.example.register;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,7 +17,7 @@ import android.widget.EditText;
 
 public class AccountActivity extends AppCompatActivity {
 
-    private EditText account;
+    private EditText edAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +25,17 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        account = findViewById(R.id.account);
+        edAccount = findViewById(R.id.account);
         Button button = findViewById(R.id.acntenter);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AccountActivity.this,BirthdayActivity.class);
+                String Account = edAccount.getText().toString();
+                SharedPreferences pref = getSharedPreferences("test",MODE_PRIVATE);
+                pref.edit()
+                        .putString("ACCOUNT",Account)
+                        .commit();
                 startActivity(intent);
             }
         });
